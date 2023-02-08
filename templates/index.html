@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+</head>
+<body>
+    {% for order in orders %}
+    <p>Name: {{ order.customer_first_name }}, {{ order.customer_surname }}</p>
+    <p>Date: {{ order.order_date }}</p>
+    <p>Size: {{ order.uk_size }}</p>
+    <p>Quantity: {{ order.quantity }}</p>
+    <p>Sneaker: {{ order.sneaker.model }}, {{ order.sneaker.brand }}, {{order.sneaker.colorway}}</p>
+    <br /><br />
+    {% endfor %}
+</body>
+</html>
